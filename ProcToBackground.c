@@ -1,4 +1,9 @@
-VOID CurrentProcToBackground(char *workingPath)
+void emptycall()
+{
+	printf("Signal SIGTTOU catched\n");
+}
+
+void CurrentProcToBackground(char *workingPath)
 {
 	pid_t pid;
   

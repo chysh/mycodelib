@@ -11,7 +11,7 @@ void CurrentProcToBackground(char *workingPath)
 		exit(0);
 	else if( pid < 0 )
 	{
-    printf("Fork Error: %s\n", strerror(errno) );
+    		printf("Fork Error: %s\n", strerror(errno) );
 		exit(1);
 	}
 
@@ -20,7 +20,7 @@ void CurrentProcToBackground(char *workingPath)
 		exit(0);
 	else if( pid < 0 )
 	{
-    printf("Fork Error: %s\n", strerror(errno) );
+    		printf("Fork Error: %s\n", strerror(errno) );
 		exit(2);
 	}
 

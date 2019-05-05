@@ -19,3 +19,23 @@ int SemaphoreCreate(sem_t *pSem)
 		return -1;
 	}
 }
+
+/*****************************************************************************
+ 函 数 名  : SemaphorePost
+ 功能描述  : 释放信号量
+ 输入参数  : SEM *pSem 信号量
+ 输出参数  : 无
+ 返 回 值  : 成功返回0,失败返回-1
+*****************************************************************************/
+int SemaphorePost(sem_t *pSem)
+{
+	assert(NULL != pSem);
+	if(0 == sem_post(pSem))
+	{
+		return 0;
+	}
+	else
+	{
+		return -1;
+	}
+}
